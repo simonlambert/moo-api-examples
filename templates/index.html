@@ -1,0 +1,14 @@
+<html>
+<body>
+    <h1>MOO OAuth Example</h1>
+    <p>Click here to auth app:
+        {% if request.session.access_token %} <i>already authenticated</i>
+        {% else %}{{url|urlize}}
+        {% endif %}
+    </p>
+    <p>OR</p>
+    <p><a href="/pack.json">Request an empty business card pack</a>. N.B. this will fail if you're not authenticated.</p>
+
+
+</body>
+</html>
